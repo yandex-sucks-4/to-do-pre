@@ -1,4 +1,4 @@
-let items = [
+const initItems = [
   'Сделать проектную работу',
   'Полить цветы',
   'Пройти туториал по Реакту',
@@ -6,6 +6,8 @@ let items = [
   'Прогуляться по улице в солнечный день',
   'Помыть посуду',
 ];
+
+let items;
 
 const listElement = document.querySelector('.to-do__list');
 const formElement = document.querySelector('.to-do__form');
@@ -16,7 +18,7 @@ function loadTasks() {
   if (storedTasks) {
     return JSON.parse(storedTasks);
   }
-  return items;
+  return initItems;
 }
 
 function createItem(item) {
